@@ -1,0 +1,302 @@
+﻿@{
+    ViewData["Title"] = "Invoice";
+}
+
+
+<form method="post" action="./" id="form1">
+	<table id="dataTable">
+       <h2>Invoice </h2>
+         <table>
+             <tr>
+                 <td>Party</td>
+                 <td>
+                 <select name="Party">
+	<option selected="selected" value="0">--Select Party--</option>
+	<option value="1">RASHTRIYA CHEMICALS &amp; FERTILIZERS LIMITED</option>
+	<option value="2">RELIANCE INDUSTRIES LIMITED</option>
+	<option value="3">AROCHEM INDUSTRIES</option>
+	<option value="4">ALBERT DAVID LTD</option>
+	<option value="5">S.K. CHEMICALS</option>
+	<option value="6">ARTCHEM ENTERPRISE</option>
+	<option value="7">ANUSHA ASSOCIATES</option>
+	<option value="8">CALCUTTA CHEMSALES CORPORATION</option>
+	<option value="9">CHEMAUX ENTERPRISES</option>
+	<option value="10">GENO PHARMACEUTICALS LIMITED</option>
+	<option value="11">MEHTA PHARMACEUTICALS INDUSTRIES</option>
+	<option value="12">PREMIER DRUG HOUSE</option>
+	<option value="13">VAISHALI PHARMA PVT LTD</option>
+	<option value="14">ALKEM LABS LIMITED</option>
+	<option value="15">ESSEL PHARMA</option>
+	<option value="16">OLIVE SOFTGEL</option>
+	<option value="17">SAMARTH LIFE SCIENCES PVT LTD.</option>
+	<option value="18">DAKSHIN LABORATORIES</option>
+	<option value="19">UNNATI PHARMACEUTICAL PVT LTD</option>
+	<option value="20">UNITECH PHARMACEUTICALS P LTD</option>
+	<option value="21">CPM ENTERPRISES</option>
+	<option value="22">SHRIYA PHARMA &amp; SURGICAL</option>
+	<option value="23">CRYSTAL PHARMA</option>
+	<option value="24">SHREE PARIKH TRADING</option>
+	<option value="25">SAREX OVERSEAS</option>
+	<option value="26">SAMIR PHARMA</option>
+	<option value="27">NGL FINE CHEM LIMITED</option>
+	<option value="28">PURE LUBS</option>
+	<option value="29">SANJAY TRADERS</option>
+	<option value="30">BSA POLYCONTAINER</option>
+	<option value="31">CHANDRA CHEMICALS</option>
+	<option value="32">VEE DEE ENTERPRISES</option>
+	<option value="33">ACEPHARMA</option>
+	<option value="34">M/S LEO PHARMA</option>
+	<option value="35">PRADIPKUMAR PHARMA P.LTD</option>
+	<option value="36">POONAM IMPEX</option>
+	<option value="37">COMFORT RUBBER INDUSTRIES</option>
+	<option value="38">SHAKTI ENTERPRISES</option>
+	<option value="39">MITSU CHEM  P.LTD</option>
+	<option value="40">KETUL CHEM P.LTD</option>
+	<option value="41">MSUN PHARMA CHEM</option>
+	<option value="42">SPARCHEM</option>
+	<option value="43">CHIRAG ORGANICS P.LTD</option>
+	<option value="44">ACID INDIA (MUMBAI)</option>
+	<option value="45">TIME MAUSER INDUSRIES P. LTD</option>
+	<option value="46">RAJANI CHEMICAL IND PVT LTD</option>
+	<option value="47">VISHAL LABORATORIES PVTLTD</option>
+	<option value="48">VINAY PHARMA</option>
+	<option value="49">VINERGY INTERNATIONAL P.LTD</option>
+	<option value="50">DEVANSHI IMPEX P.LTD</option>
+	<option value="51"></option>
+	<option value="52"></option>
+	<option value="53"></option>
+	<option value="54"></option>
+	<option value="55">BJP</option>
+
+</select></td>
+                    <td>Invoice No</td>
+                    <td>
+                    <input name="Invoice" type="text" />
+                    </td>
+                </tr>
+                <tr>
+					<td></td>
+					<td></td>
+                    <td>
+                        Invoice Date</td>
+                    <td>
+                        <input name="Date" type="date" />
+                    </td>
+                </tr>
+            </table>
+
+
+	<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Sr No.</th><th scope="col">ItemName</th><th scope="col">Units</th><th scope="col">Quantity</th><th scope="col">Rate</th><th scope="col">Value</th>
+		</tr><tr>
+			<td>1</td><td>
+                <select name="Party" onchange="UpdateUnits" class="party" id="Party">
+				<option selected="selected" value="0">--Select Item--</option>
+				<option value="1">TRI METHYL AMINE - 30% SOLUTION</option>
+				<option value="2">FURNACE OIL</option>
+				<option value="3">METHANOL</option>
+				<option value="4">CITRIC ACID MONO</option>
+				<option value="5">THEOPHYLLINE IP</option>
+				<option value="6">TARTARIC ACID DL</option>
+				<option value="7">L + TARTARIC ACID</option>
+				<option value="8">INSILICO SILICA</option>
+				<option value="9">SULPHADIMIDINE BP</option>
+				<option value="10">SALICYLIC ACID</option>
+				<option value="11">CAUSTIC FLAKES</option>
+				<option value="12">ACETIC ACID</option>
+				<option value="13">2 - METHYLRESORCINOL</option>
+				<option value="14">ALLYL BROMIDE</option>
+				<option value="15">ACETIC ANHYDRIDE</option>
+				<option value="16">POTASSIUM CARBONATE</option>
+				<option value="17">LIQUID BROMINE</option>
+				<option value="18">SODIUM METHOXIDE</option>
+				<option value="19">SODIUM ACETATE</option>
+				<option value="20">HEXANE</option>
+				<option value="21">ACETONE</option>
+				<option value="22">CHLOROFORM</option>
+				<option value="23">ETHYL ACETO ACETATE</option>
+				<option value="24">TRI CHLORO BENZEN</option>
+				<option value="25">DIMETHYL FORMAMIDE (D.M.F.)</option>
+				<option value="26">2.7 Diamino-10-Ethynel-Phenathridium Hydroxide</option>
+				<option value="27">SODIUM NITRITE</option>
+				<option value="28">ISOPROPANOL</option>
+				<option value="29">PHENANTHRIDULIUM CHLORIDE</option>
+				<option value="30">P.T.S.A</option>
+				<option value="31">TOLUNE</option>
+				<option value="32">LIQUOR AMMONIA</option>
+				<option value="33">HYDROCHLORIC ACID</option>
+				<option value="34">MORPHOLENE</option>
+				<option value="35">SULPHURIC ACID</option>
+				<option value="36">MINTROLEUM</option>
+				<option value="37">CHOLINE BASE</option>
+				<option value="38">ACYCLOVIR</option>
+				<option value="39">MICRONISED POTASSIUM CARBONATE</option>
+				<option value="40">DI ACYTYL ACYCLOVIR</option>
+				<option value="41">AMMONIUM CHLORIDE</option>
+				<option value="42">HOMIDIUM CHLORIDE</option>
+				<option value="43">BLUE HDPE DRUM SIZE 210 LTR</option>
+				<option value="44">META AMINO BENZAMIDINE HYDROCHLORIDE (MAB HCL)</option>
+				<option value="45">HMHDPE L.BLUE FOT R/ CARBOYS 50 KG</option>
+				<option value="46">FIBER DRUM 10KG</option>
+				<option value="47">FIBER DRUM  25 KG</option>
+				<option value="48">FIBER DRUM  50 KG</option>
+				<option value="49">POLY ETHYLENE LINER BAG</option>
+				<option value="50">BLUE HDPE DRUMS  60 LTR</option>
+				<option value="51">BLUE HDPE DRUMS 30 LTR</option>
+				<option value="52">BLUE HDPE CARBOY 100 LTR</option>
+				<option value="53">JERYCAN, JAR &amp; SMALL CONTAINERS</option>
+				<option value="54">SACHET SUPERMIDIUM</option>
+				<option value="55">ALFAMYDIUM ROLL</option>
+				<option value="56">SACHET SKMIDIUM INNER</option>
+				<option value="57">SAKHET LEKIPIADIUM</option>
+				<option value="58">CARTON SUPER MIDIUM</option>
+				<option value="59">CARTON ALFAMYDIUM</option>
+				<option value="60">CARTON SKMIDIUM</option>
+				<option value="61">CARTON  LEKIPIADIUM</option>
+				<option value="62">LEAFLET SUPERMIDIUM ( INSERT)</option>
+				<option value="63">LEAFLET ALFAMYDIUM  ( INSERT )</option>
+				<option value="64">LEAFLET SKMIDIUM ( INSERT)</option>
+				<option value="65">CORRUGATE BOXES</option>
+				<option value="66">INTROMIDIUM INNER CARTON</option>
+				<option value="67">INTROMIDIUM SACHET ROLL</option>
+				<option value="68">ETHYLENE OXIDE</option>
+				<option value="69">SKMIDIUM OUTER  CARTONS</option>
+				<option value="70">LUBRICATING OIL ( E-57)</option>
+				<option value="71">HDPE L. BLUE FOT ROUND CARBOYS 15 LTR.</option>
+				<option value="72">HDPE L. BLUE SQUARE JERRY CANS 10LTR.</option>
+				<option value="73">SODA ASH LIGHT TATA MAKE - 50 KG</option>
+				<option value="74">ALFAMYDIUM SACHET</option>
+				<option value="75">PLAIN SHIPPER</option>
+				<option value="76">SCHIFF BASE</option>
+				<option value="77">PLASTIC BARRELS_CARBOYS 50 KG</option>
+				<option value="78">SACHET SK MIDIUM</option>
+				<option value="79">S K MIDIUM OUTER CARTONS</option>
+				<option value="80">PLASTIC BARRELS (IBC 1000 LTRS.)</option>
+				<option value="81">INTROMIDIUM  OUTER CARTON</option>
+				<option value="82">CHOLINE SALICYLATE 70%</option>
+				<option value="83">MAGNESSIUM HYDROXIDE</option>
+				<option value="84">BENZEN</option>
+				<option value="85">INTROMIDIUM LEAFLET</option>
+				<option value="86">2 ACETYLBUTYROLACTONE 99 % MIN.</option>
+				<option value="87">CALCIUM CARBONATE</option>
+				<option value="88">CHOLINE DI HYDROGEN CITRATE</option>
+				<option value="89">ACTIVATED CARBON</option>
+				<option value="90">SILICA GEL</option>
+				<option value="91">ACYCLOVIR DI ACETATE</option>
+				<option value="92">ICE BLOCK</option>
+				<option value="93">METHYLENE DI CHLORIDE</option>
+				<option value="94">POLYPROPLENE  PUMPS</option>
+				<option value="95">PHOSPHORIC ACID - 85 %</option>
+				<option value="96">ISOMETAMIDIUM CHLORIDE HYDROCHLORIDE</option>
+				<option value="97">FLAMEPROOF MOTOR</option>
+				<option value="98">POTTASIUM HYDROXIDE</option>
+				<option value="99">ETHYLENE DI AMINE</option>
+
+			</select>
+                        </td>
+
+<script>
+function updateUnit() {
+							
+							var selectedParty = document.getElementById("Party").value;
+							var unitBe = document.getElementById("Unit");
+
+							if (selectedParty == true) {
+								unitBe.value = "KG";
+							} else  {
+								unitBe.value = "";
+							}
+						}
+</script>
+						<td>
+                            <select name="units" id="Unit" class="unit">
+				<option selected="selected" value="0">--Select Units--</option>
+				<option value="1">NOS.</option>
+				<option value="2">KG</option>
+				<option value="3">MTRS</option>
+				<option value="4">FEET</option>
+				<option value="5">INCHES</option>
+				<option value="6">TON</option>
+				<option value="7">PCS</option>
+				<option value="8">SET</option>
+				<option value="9">LOT</option>
+				<option value="10">PKTS</option>
+				<option value="11">LTR</option>
+				<option value="12">GM</option>
+				<option value="13">BAGS</option>
+				<option value="14">BOX</option>
+				<option value="15">BLOCKS</option>
+				<option value="16">SQ.MTR.</option>
+
+			</select>
+                        </td>
+						<td>
+						<input name="Qty" type="text" class="quantity" oninput="calculateValue(this)" />
+                        </td><td>
+						<input name="Rate" type="text" class="rate" oninput="calculateValue(this)" />
+                        </td><td>
+						<input name="Value" type="text" class="value" disabled />
+                        </td>
+					<button onclick="addRow()">Add Row</button>
+					</table>
+
+			<span>Total Amount</span>
+			<input name="Total" type="text" class="total" disabled />
+
+			<input type="submit" name="Save" value="Submit"  />
+			<input type="submit" name="Cancel" value="Cancel" />
+	</table>
+
+<script>
+			function calculateValue(input) {
+				var row = input.parentNode.parentNode;
+				var quantity = row.querySelector(".quantity").value;
+				var rate = row.querySelector(".rate").value;
+				var value = quantity * rate;
+
+				row.querySelector(".value").value = value;
+				calculateTotal();
+			}
+
+			function calculateTotal() {
+				var table = document.getElementById("dataTable");
+				var rows = table.getElementsByTagName("tr");
+				var value = row.querySelector(".value").value;
+				var total = value;
+
+				for (var i = 1; i < rows.length; i++) {
+					var row = rows[i];
+					var value = parseFloat(row.querySelector(".value").value);
+
+					if (!isNaN(value)) {
+						total += value;
+					}
+				}
+
+				rows[rows.length - 1].querySelector(".total").value = total;
+			}
+			
+			function addRow() {
+				var table = document.getElementById("dataTable");
+				var lastRow = table.rows[table.rows.length - 2];
+				var newRow = lastRow.cloneNode(true); 
+
+				newRow.querySelector(".party").selectedIndex = 0;
+				newRow.querySelector(".unit").selectedIndex = 0;
+				newRow.querySelector(".quantity").value = "";
+				newRow.querySelector(".rate").value = "";
+				newRow.querySelector(".value").value = "";
+
+				table.insertBefore(newRow, lastRow); 
+
+				var previousTotal = table.rows[table.rows.length - 3].querySelector(".total");
+				previousTotal.value = "";
+				
+				newRow.querySelector(".party").focus();
+			}
+</script>
+
+            
+    </form>
+	
